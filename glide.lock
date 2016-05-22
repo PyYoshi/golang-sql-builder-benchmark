@@ -1,0 +1,22 @@
+hash: 57d39eca46f13922026403286083ebb31a9ffda748d8121700f92c3c8bd037c5
+updated: 2016-05-22T11:08:06.995601214+09:00
+imports:
+- name: github.com/DATA-DOG/go-sqlmock
+  version: f191e8603617b8de5cff91e17997d5eada180133
+- name: github.com/doug-martin/goqu
+  version: a96f4ed891522b2695d7512918bfecf6431d9246
+- name: github.com/elgris/sqrl
+  version: 7274018dc4ef1d799fee00efc16b03acb25a1dee
+- name: github.com/go-sql-driver/mysql
+  version: 7ebe0a500653eeb1859664bed5e48dec1e164e73
+- name: github.com/gocraft/dbr.v1
+  version: 2519cf967cd5452db23f6e739d28fe2fa22cec9e
+  repo: git@github.com:gocraft/dbr.git
+  vcs: git
+- name: github.com/lann/builder
+  version: f22ce00fd9394014049dad11c244859432bd6820
+- name: github.com/lann/ps
+  version: 62de8c46ede02a7675c4c79c84883eb164cb71e3
+- name: github.com/lann/squirrel
+  version: ef37c531bf2d8443632ee11c8e5760101b4bea28
+devImports: []

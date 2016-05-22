@@ -5,7 +5,7 @@ import (
 	"testing"
 
 	_ "github.com/go-sql-driver/mysql"
-	"github.com/gocraft/dbr"
+	"github.com/gocraft/dbr.v1"
 )
 
 //
@@ -16,7 +16,7 @@ func dbrSess() *dbr.Session {
 	return dbr.NewConnection(nil, nil).NewSession(nil)
 }
 
-func BenchmarkDbrSelectSimple(b *testing.B) {
+func BenchmarkDbrV1SelectSimple(b *testing.B) {
 	sess := dbrSess()
 
 	b.ResetTimer()
@@ -28,7 +28,7 @@ func BenchmarkDbrSelectSimple(b *testing.B) {
 	}
 }
 
-func BenchmarkDbrSelectConditional(b *testing.B) {
+func BenchmarkDbrV1SelectConditional(b *testing.B) {
 	sess := dbrSess()
 
 	b.ResetTimer()
@@ -49,7 +49,7 @@ func BenchmarkDbrSelectConditional(b *testing.B) {
 	}
 }
 
-func BenchmarkDbrSelectComplex(b *testing.B) {
+func BenchmarkDbrV1SelectComplex(b *testing.B) {
 	sess := dbrSess()
 
 	b.ResetTimer()
@@ -76,7 +76,7 @@ func BenchmarkDbrSelectComplex(b *testing.B) {
 	}
 }
 
-func BenchmarkDbrSelectSubquery(b *testing.B) {
+func BenchmarkDbrV1SelectSubquery(b *testing.B) {
 	sess := dbrSess()
 
 	b.ResetTimer()
@@ -104,7 +104,7 @@ func BenchmarkDbrSelectSubquery(b *testing.B) {
 //
 // Insert benchmark
 //
-func BenchmarkDbrInsert(b *testing.B) {
+func BenchmarkDbrV1Insert(b *testing.B) {
 	sess := dbrSess()
 
 	b.ResetTimer()
@@ -120,7 +120,7 @@ func BenchmarkDbrInsert(b *testing.B) {
 //
 // Update benchmark
 //
-func BenchmarkDbrUpdateSetColumns(b *testing.B) {
+func BenchmarkDbrV1UpdateSetColumns(b *testing.B) {
 	sess := dbrSess()
 
 	b.ResetTimer()
@@ -137,7 +137,7 @@ func BenchmarkDbrUpdateSetColumns(b *testing.B) {
 	}
 }
 
-func BenchmarkDbrUpdateSetMap(b *testing.B) {
+func BenchmarkDbrV1UpdateSetMap(b *testing.B) {
 	sess := dbrSess()
 	b.ResetTimer()
 
@@ -154,7 +154,7 @@ func BenchmarkDbrUpdateSetMap(b *testing.B) {
 //
 // Delete benchmark
 //
-func BenchmarkDbrDelete(b *testing.B) {
+func BenchmarkDbrV1Delete(b *testing.B) {
 	sess := dbrSess()
 	b.ResetTimer()
 

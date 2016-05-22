@@ -1,0 +1,13 @@
+package: github.com/PyYoshi/golang-sql-builder-benchmark
+import:
+- package: github.com/go-sql-driver/mysql
+- package: github.com/gocraft/dbr.v1
+  vcs: git
+  version: ^1.1
+  repo: git@github.com:gocraft/dbr.git
+- package: github.com/DATA-DOG/go-sqlmock
+- package: github.com/doug-martin/goqu
+- package: github.com/elgris/sqrl
+- package: github.com/lann/squirrel
+- package: github.com/lann/builder
+- package: github.com/lann/ps

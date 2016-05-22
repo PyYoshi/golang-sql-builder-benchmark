@@ -12,7 +12,7 @@ import (
 var driver *sql.DB
 
 func init() {
-	db, _ := sqlmock.New()
+	db, _, _ := sqlmock.New()
 	driver = db
 }
 
